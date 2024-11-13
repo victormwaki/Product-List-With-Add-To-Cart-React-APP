@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color:#ccc;
+    font-family: poppins 'Segoe UI' sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.signup-content{
+    height: auto;
+    background-image: url('/public/assets/images/backgroundimage.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.wrapper{
+    margin-top: 10px;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 300px;
+    height: 500px; 
+    padding: 10px;
+    background-color:#ddddddba;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 900;
+    color: #8672ff;
+}
+ 
+form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label{
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #8672ff;
+    fill: #ffffff;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+ form input{
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    padding: 0 10px;
+
+}
+
+.wrapper button{
+    padding: 10px 25px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: #a192f4;
+    color: #fff;
+    box-shadow: 0px 1px 7px black;
+}
+
+.popup{
+    width: 400px;
+    height: 200px;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border-radius: 24px;
+    visibility:hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.svg-image{
+width: 4rem;
+height: 4rem;
+margin-top: -50px;
+}
+
+.popup h2{
+font-size: 38px;
+font-weight: 500;
+
+}
+
+a{
+    text-decoration: none;
+    color:#8672ff
+}
+
+a:hover{
+text-decoration: underline;
+color: #fff;
+}
