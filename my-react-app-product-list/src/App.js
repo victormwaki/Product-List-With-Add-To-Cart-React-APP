@@ -8,13 +8,17 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState([]);
 
-  // Fetch product data from db.json
   useEffect(() => {
-    fetch('/data.json')
-      .then((response) => response.json())
+    fetch('/db.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));
-  }, []);
+  }, []);  
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
