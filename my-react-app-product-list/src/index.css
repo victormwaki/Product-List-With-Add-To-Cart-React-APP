@@ -34,9 +34,17 @@ header {
     color: #070707;
 }
 
+.logo a{
+  font-style: italic;
+}
+
 .logo {
     position: relative;
     width: max-content;
+}
+
+.logo a:hover{
+  color: hsl(14, 86%, 42%);
 }
 
 .logo:hover::after {
@@ -58,7 +66,7 @@ header {
 
 ul {
     list-style: none;
-   margin-left: 250px;
+   /* margin-left: 250px; */
 }
 
 ul li {
@@ -84,6 +92,14 @@ ul li a {
     font-weight: bold;
     color: #050505;
 }
+
+ul li {
+  margin-left: 40px;
+}
+
+ul li a:hover {
+  color: hsl(14, 86%, 42%);
+} 
 
 .btn-container {
     /* background-color: #757171; */
@@ -125,7 +141,7 @@ ul li a {
 
 .main-content{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .gallery {
@@ -133,7 +149,7 @@ ul li a {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 50px;
-    width: 70vw;
+    width: 60vw;
 }
 
 .cart {
@@ -147,14 +163,14 @@ ul li a {
     overflow-y: auto;              /* Allow vertical scroll if content overflows */
     transition: height 0.3s ease;  /* Smooth transition for height */
     min-height: 200px;             /* Minimum height when empty */
-    max-height: 400px;
+    max-height: 300px;
 }
 
-.cart img {
+/* .cart img {
     width: 150px;
     height: 150px;
     margin: 0 auto;
-}
+} */
 
 .cart h2 {
     color: hsl(14, 86%, 42%);
@@ -226,8 +242,8 @@ ul li a {
 }
 
 .card img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 34px;
 }
 
@@ -237,8 +253,8 @@ ul li a {
 
 .btn {
     position: absolute;
-    top: 280px;
-    right: 80px;
+    top: 230px;
+    right: 100px;
     font-size: 1rem;
     padding: 12px 20px;
     border: none;
