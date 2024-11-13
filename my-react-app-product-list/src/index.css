@@ -118,9 +118,14 @@ ul li a {
     color: hsl(14, 86%, 42%);
 }
 
-.gallery-container {
+/* .gallery-container {
     display: flex;
     justify-content: space-between;
+} */
+
+.main-content{
+  display: flex;
+  justify-content: space-between;
 }
 
 .gallery {
