@@ -7,9 +7,10 @@ import Cart from './components/Cart';
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
 
    useEffect(() => {
-    fetch('/db.json')
+    fetch('./db.json')
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data.products)) {
