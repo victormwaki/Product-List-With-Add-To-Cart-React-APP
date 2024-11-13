@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: hsl(13, 31%, 94%);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 50px;
+    padding: 10px 0;
+    background-color: hsl(13, 31%, 94%);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.logo a {
+    margin: 0 0 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    color: #070707;
+}
+
+.logo {
+    position: relative;
+    width: max-content;
+}
+
+.logo:hover::after {
+    content: '';
+    background: linear-gradient(to right, hsl(14, 16%, 73%), rgb(209, 17, 56));
+    width: 100%;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 2s ease;
+}
+
+.menu-button {
+    list-style: none;
+    display: none;
+}
+
+ul {
+    list-style: none;
+   margin-left: 250px;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+    width: max-content;
+}
+
+ul li:hover::after {
+    content: '';
+    background: linear-gradient(to right, hsl(14, 16%, 73%), rgb(209, 17, 56));
+    width: 100%;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+}
+
+ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #050505;
+}
+
+.btn-container {
+    background-color: #757171;
+    border-radius: 24px;
+    /* background-color: hsl(13, 31%, 94%); */
+} 
+
+.btn-container button {
+    /* background-color: #b5aeae; */
+    display: inline-flex;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 24px;
+}
+
+.sign-in {
+    background-color: hsl(10, 5%, 75%);
+    border-radius: 24px;
+}
+
+.sign-up {
+    background-color: hsl(13, 31%, 94%);
+
+}
+
+.btn-container button:hover {
+    opacity: 0.9;
+    color: hsl(14, 86%, 42%);
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px;
+    width: 70vw;
+}
+
+.cart {
+    margin: 0;
+    padding: 20px;
+    width: 25vw;
+    border-radius: 24px;
+    background-color: #fff;
+    height: auto;
+    text-align: center;
+    overflow-y: auto;              /* Allow vertical scroll if content overflows */
+    transition: height 0.3s ease;  /* Smooth transition for height */
+    min-height: 200px;             /* Minimum height when empty */
+    max-height: 400px;
+}
+
+.cart img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.cart h2 {
+    color: hsl(14, 86%, 42%);
+}
+
+.cart p {
+    margin: 10px;
+    color: hsl(12, 20%, 44%);
+}
+
+.cart-item {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    padding: 10px 12px; 
+    margin: 10px; 
+    background-color: #dedbdb;
+    border-radius: 34px; 
+            
+}
+
+.cart-item p {
+    margin: 0;                 
+}
+
+.remove-item {
+    background: none;          
+    border: none;              
+    color: hsl(12, 20%, 44%);
+    font-size: 1rem;         
+    cursor: pointer;           
+}
+
+.remove-item:hover {
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    color: hsl(0, 86%, 55%);  
+    border-radius: 50%; 
+}
+
+  #cart-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: hsl(14, 86%, 42%);
+    margin-top: 20px;
+  }
+
+  #confirm-order{
+    background-color: hsl(14, 86%, 42%);
+    border: none;
+    margin: 0 60px;
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+  }
+
+  #confirm-order:hover {
+    transition: all 0.3s ease;
+    background-color: hsl(0, 90%, 64%);
+  }
+  
+.card {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 34px;
+}
+
+.fa-cart-plus {
+    color: hsl(14, 86%, 42%);
+}
+
+.btn {
+    position: absolute;
+    top: 280px;
+    right: 80px;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.btn:hover {
+    border: 1.8px solid hsl(14, 86%, 42%);
+    background-color: hsl(13, 31%, 94%);
+    box-shadow: 5px 5px 10px #ffcae2;
+    color: hsl(14, 86%, 42%);
+}
+
+.item {
+    padding-top: 30px;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+.price {
+    color: hsl(14, 86%, 42%);
+}
+
+.food {
+    color: hsl(12, 20%, 44%);
+}
