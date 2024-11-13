@@ -8,17 +8,22 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+   useEffect(() => {
     fetch('/db.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+      .then((response) => response.json())
+      .then((data) => {
+        if (Array.isArray(data.products)) {
+          setProducts(data.products);
+        } else {
+          setError('Products data is not in the correct format.');
+          console.error('Products data is not an array:', data.products);
         }
-        return response.json();
       })
-      .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching products:', error));
-  }, []);  
+      .catch((error) => {
+        setError('Failed to fetch products.');
+        console.error('Error fetching products:', error);
+      });
+  }, []); 
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
