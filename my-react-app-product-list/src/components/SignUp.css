@@ -6,13 +6,6 @@
     padding: 0;
 }
 
-html{
-    background-color:#ccc;
-    font-family: poppins 'Segoe UI' sans-serif;
-    font-size: 1rem;
-    text-align: center;
-}
-
 .signup-content{
     height: auto;
     background-image: url('/public/assets/images/backgroundimage.jpg');
