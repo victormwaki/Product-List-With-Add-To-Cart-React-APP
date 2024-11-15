@@ -41,12 +41,6 @@ function SignUp({ onClose }) {
           <button type="submit" id="signUpButton">Signup</button>
         </form>
         <p>Already have an Account? <a href="login.html">Login</a></p>
-        <div className="popup" id="popup">
-          <img src="/assets/images/check_circle_24dp_75FB4C_FILL0_wght400_GRAD0_opsz24.svg" alt='' className="svg-image" />
-          <h2 style={{ color: '#75FB4C' }}>Successful!</h2>
-          <p>You have successfully registered an account.</p>
-          <button onClick={onClose}>Ok</button>
-        </div>
       </div>
     </main>
   );

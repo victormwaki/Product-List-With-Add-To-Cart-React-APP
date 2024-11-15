@@ -8,7 +8,7 @@ function ProductCard({ product, addToCart }) {
       <article className="item">
         <p className="food">{product.category}</p>
         <strong>{product.name}</strong>
-        <p className="price">${product.price.toFixed(2)}</p>
+        <p className="price">${product.price.toFixed(2)}</p>       
       </article>
       <button className="btn" onClick={() => addToCart(product)}>
         <i className="fa-solid fa-cart-plus"></i> Add to cart
